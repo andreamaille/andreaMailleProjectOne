@@ -8,17 +8,18 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 /* Design Resources:
 
-Main background-color: #201e21
-Yellow: #faba63
+Colors:
+    Main background-color: #201e21;
+    Dark Blue: #14171f;
+    Yellow: #faba63;
 
-Font stacks:
+Fonts:
     font-family: 'Lato', sans-serif;
     font-family: 'Italiana', serif;
 
-Designer Notes: 
-As long as the jewlery is in focus.
-
-    */
+Design Notes: 
+    I spoke to Fatima regarding the position of the images at each responsive stage. She said that as long as the jewelry is in focus that it is fine. I also spoke to her about the font-weights as they were rendering differently in my browser than in the design and she also said this was fine as long as they match the font weights listed the design.
+*/
 
 /* General Styles */
 
@@ -30,6 +31,12 @@ body {
     color:white;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+}
+
+.wrapper {
+    max-width:1440px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 p {
@@ -45,11 +52,14 @@ img {
     width:100%;
 }
 
-a,
+a {
+    text-decoration: none;
+
+}
+
 ul,
 li{
     list-style-type: none;
-    text-decoration: none;
     margin:0;
     padding:0;
 }
@@ -66,18 +76,12 @@ h2 {
     line-height: 0.9;
 }
 
-.wrapper {
-    max-width:1440px;
-    width: 80%;
-    margin: 0 auto;
-}
-
-section{
+section {
     padding:100px 0;
     margin:0;
 }
 
-button{ 
+button {
     color:white;
     background-color:transparent;
     font-size: 1.25rem;
@@ -94,22 +98,27 @@ button:hover {
     background-color: #faba63;
 }
 
-/* HEADER STYLES */
+/*Header Styles*/
 
-header{
-    background: url(../assets/headerImage.png) #201e21 no-repeat right;
-    background-size: contain;
+header {
+    background:url(../assets/headerImage.png) top right/contain no-repeat #201e21;
     width:100%;
     height:100vh;
 }
 
-.headerNav li {
+/* Header Nav Styles */
+
+.headerNav li,
+.headerNav a {
     color:#faba63;
+}
+
+.headerNav li {
     font-size: 1rem;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     margin:20px 15px 20px 0;
-    padding:1%;
+    padding:12px;
     float: left;
 }
 
@@ -118,7 +127,6 @@ header{
 }
 
 .headerNav li a {
-    color:#faba63;
     transition: all 0.3s ease;
 }
 
@@ -126,13 +134,29 @@ header{
     border-bottom: 1.75px solid #faba63;
 }
 
+/* Hamburger Nav for responsive */
+
+.hamburgerNav span {
+    background-color:white;
+    width:42px;
+    height:3px;
+    margin:0 0 7px;
+    border-radius: 2px 2px 2px 2px;
+    border: 1px solid #fff;
+    display:block;
+}
+
 .hamburgerNav {
-    font-size: 2rem;
     position: absolute;
-    top: 25px;
-    right: 25px;
+    top: 15px;
+    right: 20px;
     visibility: hidden;
 }
+
+/* The hamburger navs from Font Awesome didn't match the design so I made a custom one with spans */
+
+
+/* Header Social Icons */
 
 .headerSocialIcons {
     padding:5px;
@@ -156,7 +180,7 @@ header{
     color:#faba63;
 }
 
-/* HEADER LOGO */
+/* Header Logo Styles */
 
 .logo {
     text-align: right;
@@ -167,7 +191,7 @@ header{
     float:left;
 }
 
-.top {
+.companyName {
     color:white;
     font-family: 'Italiana', serif;
     font-size: 8.1rem;
@@ -176,18 +200,24 @@ header{
     width:100%;
 }
 
-.line1,
-.line2 {
+.logoLine1,
+.logoLine2 {
     margin:0;
     display: block;
     float:right;
 }
 
-.line1 {
+.logoLine1 {
     width:100%;
 }
 
-.line2{
+.logoLine1::before,
+.logoLine1::after{
+    content: "-";
+    margin:0;
+}
+
+.logoLine2{
     width:50%;
 }
 
@@ -201,11 +231,6 @@ header{
     float:left;
 }
 
-.line1::before,
-.line1::after{
-    content: "-";
-    margin:0;
-}
 
 /* Section - About */
 
@@ -213,23 +238,18 @@ header{
     background-color:#14171f;
 }
 
-.aboutInfo {
-    width: 70%;
-    float:left;
-}
-
 .aboutImage{
-    background: url(../assets/aboutImage.png) no-repeat;
-    background-size: cover;
-    background-position: top left;
+    background: url(../assets/aboutImage.png) top left/cover no-repeat;
     margin-right: 30px;
     width:calc(30% - 30px);
     height:330px;   
     float:left;
-    background-color:lavender;
 }
 
-
+.aboutInfo {
+    width: 70%;
+    float:left;
+}
 
 /* Section - Latest Collection */
 
@@ -261,7 +281,7 @@ header{
 .titleCard { 
     text-align: center;
     float:left;
-    width:33.33%;
+    width:calc(100% / 3);
 }
 
 .titleCard i {
@@ -281,6 +301,7 @@ aside {
     background-color:#201e21;
     overflow: hidden;
 }
+/* overflow:hidden prevents the full width images from creating an awkward horizontal scroll at certain screen sizes*/
 
 article h4 { 
     font-size:2.55rem;
@@ -308,6 +329,7 @@ article p {
 .mixMatch {
     margin:140px 0 60px 100px;
 }
+/*.mixMatch has more margin-top because the h4 text does not take two lines*/
 
 .articleImage1,
 .sustainableMaterials {
@@ -319,31 +341,28 @@ article p {
     float:left;
 }
 
-/* mixMatch has more margin-top before the h4 does not take two lines */
-
-
-/* I found the below solution for full width image outside of parent container. I didn't like the idea of changing my html mark-up to account for the bleed area. 
-https://salferrarello.com/full-screen-width-image-inside-container/
-*/
-
 .articleImage {
     width: 50vw;
     height:600px;
 }
 
 .articleImage1 {
-    background: url(../assets/articleImage1.png) no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: url(../assets/articleImage1.png) center center/cover no-repeat;
     margin-right: calc(50% - 50vw);
 }
 
 .articleImage2 {
-    background: url(../assets/articleImage2.png) no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: url(../assets/articleImage2.png) center center/cover no-repeat;
     margin-left: calc(50% - 50vw);
 }
+
+/* 
+
+^^Resource Credit: This article below helped me solve the problem of an image positioned outside of it's parent container. I didn't want to change my html mark-up for stylistic purposes and this solution showed me how to use margins to adjust the position. The article talks about full screen images but I adapted and rewrote the code for this design. Just wanted to note this resource as it wasn't taught in class. 
+
+https://salferrarello.com/full-screen-width-image-inside-container/
+
+*/
 
 /* Footer Styles */
 
@@ -373,17 +392,19 @@ https://salferrarello.com/full-screen-width-image-inside-container/
     line-height: 1.5;
 }
 
-.footerTitle {
-    font-size: 1.25rem;
+.footerTitle, 
+.footerNav li {
     font-family: 'Italiana', serif;
     text-transform: uppercase;
+}
+
+.footerTitle {
+    font-size: 1.25rem;
     margin-bottom: 10px;
 }
 
 .footerNav li {
     font-size: 1rem;
-    font-family: 'Italiana', serif;
-    text-transform: uppercase;
     margin:8px 0;
 }
 
@@ -394,6 +415,10 @@ https://salferrarello.com/full-screen-width-image-inside-container/
 
 .footerNav li a:hover {
     color:#faba63;
+}
+
+.footerNav li:nth-child(2){
+    display: none;
 }
 
 .newsletterSubscribe {
@@ -414,14 +439,18 @@ input[type=submit] {
 
 input[type=email] {
     width:70%;
+    font-family: 'Lato', sans-serif; 
+    font-size:1rem;
+    font-weight: 300;
+    text-align: center;
 }
 
 input[type=submit]{
-    color:white;
-    background-color:black;
+    width:30%;
     font-family: 'Italiana', serif;
     text-transform: uppercase;
-    width:30%;
+    color:white;
+    background-color:black;
     transition: all 0.5s ease;
 }
 
@@ -441,28 +470,17 @@ input[type=submit]:hover {
 }
 
 
-
-
-
-
-
-
 /* Media Queries */
-
-
-
 
 @media (max-width:1375px) {
     /* General */
-
     h2 {
         font-size: 1.5rem;
         font-weight: 300;
     }
 
     /* Header */
-
-    .top {
+    .companyName {
         font-size:3.1rem;
     }
 
@@ -470,14 +488,16 @@ input[type=submit]:hover {
         font-size: 0.8rem;
     }
 
-    /* Section - About */
+   .logo {
+        margin-left:-200px; 
+    }
 
+    /* Section - About */
     .about p {
         font-size:0.9rem;
     }
 
     /* Section - Article */
-
     .articleDescription h4 {
         font-size:1.5rem;
     }
@@ -503,16 +523,9 @@ input[type=submit]:hover {
 
 @media (max-width: 1150px) {
     /* General */
-
     button {
         display: block;
         margin:50px auto 0;
-    }
-
-    /* Header */
-
-   .logo {
-        margin-left:-100px; 
     }
 
     /* Section - About */
@@ -529,14 +542,11 @@ input[type=submit]:hover {
     }
 
     .aboutImage {
-        background: url(../assets/aboutImageMobile.png) no-repeat;
-        background-size: cover;
-        background-position: center center;
+        background: url(../assets/aboutImageMobile.png) center center/cover no-repeat;
         height:300px;
     }
 
     /* Section - Articles */
-
     .articleImage1,
     .sustainableMaterials,
     .articleImage2,
@@ -557,7 +567,6 @@ input[type=submit]:hover {
     }
 
     /* Footer */
-
     .footerNav,
     .newsletterSubscribe,
     .contactInfo {
@@ -578,6 +587,26 @@ input[type=submit]:hover {
         margin-right:10px;
         text-align: right;
     }
+
+    .footerNav li:nth-child(2){
+        display:inline;
+    }
+
+    .footerNav li:nth-child(4){
+        display:none;
+    }
+}
+
+@media (max-width:900px) {
+    /* Header */
+    header {
+        background: url(../assets/headerMobile.png) #201e21 top right/contain no-repeat;
+    }
+
+    .logo {
+        width:75%;
+        padding-top:calc(35vh - 100px);
+    }
 }
 
 @media (max-width: 800px) {
@@ -591,14 +620,8 @@ input[type=submit]:hover {
     }
 
     /* Header */
-    header {
-        background: url(../assets/headerMobile.png) #201e21 no-repeat top right;
-        background-size: contain;
-    }
-
     .logo {
-        width:75%;
-        padding-top:calc(45vh - 100px);
+        margin-left:-100px; 
     }
 
     .headerSocialIcons,
@@ -611,7 +634,6 @@ input[type=submit]:hover {
     }
 
     /* Section - Latest Collection */
-
     .collectionGallery img {
         width:calc((100% - 40px) / 2);
         margin-right:40px;
@@ -647,18 +669,15 @@ input[type=submit]:hover {
     }
 
     .articleImage1 {
-        background: url(../assets/articleMobile1.png) no-repeat center;
-        background-size: cover;
+        background: url(../assets/articleMobile1.png) center/cover no-repeat ;
         height:225px;
 
     }
     .articleImage2 {
-        background: url(../assets/articleMobile2.png) no-repeat center;
-        background-size:cover;
+        background: url(../assets/articleMobile2.png) center/cover no-repeat;
     }
 
     /* Footer */
-
     input[type=email],
     input[type=submit] {
         float:none;
@@ -679,10 +698,9 @@ input[type=submit]:hover {
 
 @media (max-width:400px) {
     /* Header */
-    .top {
+    .companyName {
         font-weight: 300;
-    }
-    
+    }   
 }
 
 @media (max-width:399px) {
@@ -690,6 +708,5 @@ input[type=submit]:hover {
     .logo {
         margin-left:-50px;
     }
-
 }
 

@@ -16,18 +16,22 @@
             <nav class="headerNav">
                 <ul class="clearfix">
                     <li><a href='index.html'>Home</a></li>
-                    <li><a href=''>About</a></li>
-                    <li><a href=''>Blog</a></li>
-                    <li><a href=''>Contact</a></li>
+                    <li><a href='#about'>About</a></li>
+                    <li><a href='#blog'>Blog</a></li>
+                    <li><a href='#contact'>Contact</a></li>
                 </ul>
             </nav>
             <!-- HamburgerNav for responsive design -->
-            <i class="fa fa-bars hamburgerNav"></i>
+            <div class="hamburgerNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
             <h1 class="logo clearfix">
-                <div class="top clearfix">
-                    <span class="line1">Aro</span>
-                    <span class="line2">Ra</span>
+                <div class="companyName clearfix">
+                    <span class="logoLine1">Aro</span>
+                    <span class="logoLine2">Ra</span>
                 </div>
                 <div class="tagline">Jewelers</div>
             </h1>
@@ -59,7 +63,7 @@
         </div>
     </header>
     <main>
-        <section class="about clearfix">
+        <section class="about clearfix" id="about">
             <div class="wrapper clearfix">
                 <div class="aboutImage"></div>
                 <div class="aboutInfo">
@@ -72,13 +76,13 @@
             </div>
         </section>
 
-        <section class="latestCollection">
+        <section class="latestCollection" id="gallery">
             <div class="wrapper">
                 <h2>Latest Collection</h2>
                 <div class="collectionGallery clearfix">
-                    <img src="./assets/collectionImage1.png" alt="close up image of necklaces">
-                    <img src="./assets/collectionImage2.png" alt=" close up image of rings">
-                    <img src="./assets/collectionImage3.png" alt=" close up image of earrings">
+                    <img src="./assets/collectionImage1.png" alt="close up shot of several necklaces dangling">
+                    <img src="./assets/collectionImage2.png" alt=" close up image of two rings intertwined">
+                    <img src="./assets/collectionImage3.png" alt=" close up image of several gold and pearl earrings">
                 </div>
             </div>
         </section>
@@ -87,22 +91,22 @@
             <div class="wrapper clearfix">
                 <ul>
                     <li class="titleCard">
-                        <i class="far fa-images"></i>
+                        <i class="far fa-images" aria-hidden="true"></i>
                         <h3>Catologue</h3>
                     </li>
                     <li class="titleCard">
-                        <i class="far fa-calendar-alt"></i>
+                        <i class="far fa-calendar-alt" aria-hidden="true"></i>
                         <h3>Events</h3>
                     </li>
                     <li class="titleCard">
-                        <i class="far fa-handshake"></i>
+                        <i class="far fa-handshake" aria-hidden="true"></i>
                         <h3>Collaborations</h3>
                     </li>
                 </ul>
             </div>
         </section>
         
-        <aside class="blogPost">
+        <aside class="blogPosts" id="blog">
             <div class="wrapper clearfix">
 
                 <article class="clearfix">
@@ -128,16 +132,17 @@
             </div>
         </aside>
 
-        <footer>
+        <footer id="contact">
             <div class="mainContent">
                 <div class="wrapper clearfix">
                     
                     <nav class="footerNav">
                         <ul class="clearfix">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">Gallery</a></li>
-                            <li><a href="">Contact</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
 
@@ -146,12 +151,11 @@
                         <p>Subscribe to our newsletter to stay updated</p>
                         <form action="subscribeEmail.php" method="POST" autocomplete="on" name="newsletterSubscription" class="clearfix">
                             <fieldset>
-                                <label for="email" class="visuallyHidden">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <label for="email" class="visuallyHidden">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="email address" required>
                                 <label for="submit" class="visuallyHidden">Submit</label>
                                 <input type="submit" class="subscribe-button" value="Subscribe">
                             </fieldset>
-                          
                         </form>
                     </div>
 
