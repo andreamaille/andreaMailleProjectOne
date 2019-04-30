@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arora - Jewelers</title>
+    <link href="https://fonts.googleapis.com/css?family=Italiana|Lato:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <nav class="headerNav">
+                <ul class="clearfix">
+                    <li><a href='index.html'>Home</a></li>
+                    <li><a href=''>About</a></li>
+                    <li><a href=''>Blog</a></li>
+                    <li><a href=''>Contact</a></li>
+                </ul>
+            </nav>
+            <!-- HamburgerNav for responsive design -->
+            <i class="fa fa-bars hamburgerNav"></i>
+
+            <h1 class="logo clearfix">
+                <div class="top clearfix">
+                    <span class="line1">Aro</span>
+                    <span class="line2">Ra</span>
+                </div>
+                <div class="tagline">Jewelers</div>
+            </h1>
+
+            <div class="headerSocialIcons">
+                <ul>
+                    <li>
+                        <a href="" aria-label="Go to Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" aria-label="Go to facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" aria-label="Go to Snapchat">
+                            <i class="fab fa-snapchat-ghost"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" aria-label="Go to Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about clearfix">
+            <div class="wrapper clearfix">
+                <div class="aboutImage"></div>
+                <div class="aboutInfo">
+                    <h2>Hand Crafted</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat
+                    vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla el. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="latestCollection">
+            <div class="wrapper">
+                <h2>Latest Collection</h2>
+                <div class="collectionGallery clearfix">
+                    <img src="./assets/collectionImage1.png" alt="close up image of necklaces">
+                    <img src="./assets/collectionImage2.png" alt=" close up image of rings">
+                    <img src="./assets/collectionImage3.png" alt=" close up image of earrings">
+                </div>
+            </div>
+        </section>
+
+        <section class="additionalLinks">
+            <div class="wrapper clearfix">
+                <ul>
+                    <li class="titleCard">
+                        <i class="far fa-images"></i>
+                        <h3>Catologue</h3>
+                    </li>
+                    <li class="titleCard">
+                        <i class="far fa-calendar-alt"></i>
+                        <h3>Events</h3>
+                    </li>
+                    <li class="titleCard">
+                        <i class="far fa-handshake"></i>
+                        <h3>Collaborations</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <aside class="blogPost">
+            <div class="wrapper clearfix">
+
+                <article class="clearfix">
+                    <div class="articleImage articleImage1"></div>
+                    <div class="articleDescription sustainableMaterials">
+                        <h4>Sustainable Materials</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi pariatur tempora qui ratione eius, rem eos repellendus voluptatem provident nobis, quo dolore illo? Cumque aperiam sit similique sequi nobis aut repellat earum eius tenetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, cumque.</p>
+                        <button>Read More</button>
+                    </div>
+                </article>
+
+                <article class="clearfix">
+                    <div class="articleImage articleImage2"></div>
+                    <div class="articleDescription mixMatch">
+                        <h4>Mix and Match</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi pariatur tempora qui ratione eius, rem eos
+                        repellendus voluptatem provident nobis, quo dolore illo? Cumque aperiam sit similique sequi nobis aut
+                        repellat earum eius tenetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, aperiam.</p>
+                        <button>Read More</button>
+                    </div>
+                </article>
+
+            </div>
+        </aside>
+
+        <footer>
+            <div class="mainContent">
+                <div class="wrapper clearfix">
+                    
+                    <nav class="footerNav">
+                        <ul class="clearfix">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Blog</a></li>
+                            <li><a href="">Gallery</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="newsletterSubscribe">
+                        <span class="footerTitle">Stay Updated</span>
+                        <p>Subscribe to our newsletter to stay updated</p>
+                        <form action="subscribeEmail.php" method="POST" autocomplete="on" name="newsletterSubscription" class="clearfix">
+                            <fieldset>
+                                <label for="email" class="visuallyHidden">Email</label>
+                                <input type="email" id="email" name="email" required>
+                                <label for="submit" class="visuallyHidden">Submit</label>
+                                <input type="submit" class="subscribe-button" value="Subscribe">
+                            </fieldset>
+                          
+                        </form>
+                    </div>
+
+                    <div class="contactInfo">
+                        <span class="footerTitle">Contact</span>
+                        <p>info@email.com | 123 - 456 - 7890</p>
+                        <p>123 some road, Toronto, ON</p>
+                        <p>A5A 5A5</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="secondaryContent">
+                <div class="wrapper">
+                    <p>Copyright &copy; 2019 HackerYou</p>
+                </div>
+            </div>   
+        </footer>
+    </main>
+</body>
+</html>

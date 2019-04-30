@@ -1,0 +1,695 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+/* Design Resources:
+
+Main background-color: #201e21
+Yellow: #faba63
+
+Font stacks:
+    font-family: 'Lato', sans-serif;
+    font-family: 'Italiana', serif;
+
+Designer Notes: 
+As long as the jewlery is in focus.
+
+    */
+
+/* General Styles */
+
+html {
+    font-size: 125%;
+}
+
+body {
+    color:white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+p {
+    margin:0;
+    padding:0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+    width:100%;
+}
+
+a,
+ul,
+li{
+    list-style-type: none;
+    text-decoration: none;
+    margin:0;
+    padding:0;
+}
+
+h2 {
+    font-size: 2.55rem;
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    display:inline-block;
+    padding:0;
+    margin:0;
+    margin-bottom: 10px;
+    line-height: 0.9;
+}
+
+.wrapper {
+    max-width:1440px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+section{
+    padding:100px 0;
+    margin:0;
+}
+
+button{ 
+    color:white;
+    background-color:transparent;
+    font-size: 1.25rem;
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+    text-align: center;
+    border: 2px solid #faba63;
+    margin:20px 0;
+    padding:8px;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: #faba63;
+}
+
+/* HEADER STYLES */
+
+header{
+    background: url(../assets/headerImage.png) #201e21 no-repeat right;
+    background-size: contain;
+    width:100%;
+    height:100vh;
+}
+
+.headerNav li {
+    color:#faba63;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin:20px 15px 20px 0;
+    padding:1%;
+    float: left;
+}
+
+.headerNav li:last-child{
+    margin-right: 0;
+}
+
+.headerNav li a {
+    color:#faba63;
+    transition: all 0.3s ease;
+}
+
+.headerNav li a:hover {
+    border-bottom: 1.75px solid #faba63;
+}
+
+.hamburgerNav {
+    font-size: 2rem;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    visibility: hidden;
+}
+
+.headerSocialIcons {
+    padding:5px;
+    margin:40px;
+    position: absolute;
+    bottom:0;
+    right:0;
+}
+
+.headerSocialIcons li {
+    padding:8px;
+}
+
+.headerSocialIcons i {
+    color: white;
+    font-size:1.25rem;
+    transition: all 0.3s ease;
+}
+
+.headerSocialIcons i:hover{
+    color:#faba63;
+}
+
+/* HEADER LOGO */
+
+.logo {
+    text-align: right;
+    line-height: 1;
+    margin:0 10px;
+    padding-top:calc(30vh - 100px);
+    width:50%;
+    float:left;
+}
+
+.top {
+    color:white;
+    font-family: 'Italiana', serif;
+    font-size: 8.1rem;
+    text-transform: uppercase;
+    margin:0;
+    width:100%;
+}
+
+.line1,
+.line2 {
+    margin:0;
+    display: block;
+    float:right;
+}
+
+.line1 {
+    width:100%;
+}
+
+.line2{
+    width:50%;
+}
+
+.tagline {
+    color:#faba63;
+    font-size: 2.25rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: right;
+    width:100%;
+    float:left;
+}
+
+.line1::before,
+.line1::after{
+    content: "-";
+    margin:0;
+}
+
+/* Section - About */
+
+.about {
+    background-color:#14171f;
+}
+
+.aboutInfo {
+    width: 70%;
+    float:left;
+}
+
+.aboutImage{
+    background: url(../assets/aboutImage.png) no-repeat;
+    background-size: cover;
+    background-position: top left;
+    margin-right: 30px;
+    width:calc(30% - 30px);
+    height:330px;   
+    float:left;
+    background-color:lavender;
+}
+
+
+
+/* Section - Latest Collection */
+
+.latestCollection { 
+    background-color: #201e1f;
+    text-align: center;
+}
+
+.latestCollection h2 {
+    margin-bottom:85px;
+}
+
+.collectionGallery img {
+    width:calc((100% - 80px) / 3);
+    margin-right:40px;
+    float:left;
+}
+
+.collectionGallery img:nth-of-type(3) {
+    margin-right: 0;
+}
+
+/* Section - Additional Links */
+
+.additionalLinks {
+    background-color:#14171f;
+}
+
+.titleCard { 
+    text-align: center;
+    float:left;
+    width:33.33%;
+}
+
+.titleCard i {
+    color:#faba63;
+    font-size: 3rem;
+}
+
+.titleCard h3 { 
+    font-size:1.5rem;
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+}
+
+/* Section - blogPost */
+
+aside {
+    background-color:#201e21;
+    overflow: hidden;
+}
+
+article h4 { 
+    font-size:2.55rem;
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+    line-height: 1;
+    width:90%;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+article p {
+    line-height: 1.5;
+}
+
+.articleDescription{
+    padding:2px;
+    width: calc(50% - 100px);
+}
+
+.sustainableMaterials {
+    margin:100px 100px 50px 0;
+}
+
+.mixMatch {
+    margin:140px 0 60px 100px;
+}
+
+.articleImage1,
+.sustainableMaterials {
+    float:right;
+}
+
+.articleImage2,
+.mixMatch {
+    float:left;
+}
+
+/* mixMatch has more margin-top before the h4 does not take two lines */
+
+
+/* I found the below solution for full width image outside of parent container. I didn't like the idea of changing my html mark-up to account for the bleed area. 
+https://salferrarello.com/full-screen-width-image-inside-container/
+*/
+
+.articleImage {
+    width: 50vw;
+    height:600px;
+}
+
+.articleImage1 {
+    background: url(../assets/articleImage1.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-right: calc(50% - 50vw);
+}
+
+.articleImage2 {
+    background: url(../assets/articleImage2.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-left: calc(50% - 50vw);
+}
+
+/* Footer Styles */
+
+.mainContent {
+    background-color:#14171f;
+    padding:90px 0;
+}
+
+.footerNav,
+.newsletterSubscribe,
+.contactInfo {
+    float:left;
+}
+
+.footerNav,
+.contactInfo {
+    width:25%;
+}
+
+.newsletterSubscribe {
+    width:50%;
+}
+
+.mainContent p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footerTitle {
+    font-size: 1.25rem;
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footerNav li {
+    font-size: 1rem;
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+    margin:8px 0;
+}
+
+.footerNav li a {
+    color:white;
+    transition: all 0.5s ease;
+}
+
+.footerNav li a:hover {
+    color:#faba63;
+}
+
+.newsletterSubscribe {
+    text-align: center;
+}
+
+fieldset {
+    border:none;
+}
+
+input[type=email],
+input[type=submit] {
+    border:none;
+    padding:10px;
+    margin:10px 0;
+    float:left;
+}
+
+input[type=email] {
+    width:70%;
+}
+
+input[type=submit]{
+    color:white;
+    background-color:black;
+    font-family: 'Italiana', serif;
+    text-transform: uppercase;
+    width:30%;
+    transition: all 0.5s ease;
+}
+
+input[type=submit]:hover {
+    background-color:#201e21;
+}
+
+.contactInfo {
+    text-align: right;
+}
+
+.secondaryContent {
+    background-color: #000;
+    font-size: 0.9rem;
+    text-align: center;
+    padding:10px 0;
+}
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+
+
+
+@media (max-width:1375px) {
+    /* General */
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    /* Header */
+
+    .top {
+        font-size:3.1rem;
+    }
+
+    .tagline {
+        font-size: 0.8rem;
+    }
+
+    /* Section - About */
+
+    .about p {
+        font-size:0.9rem;
+    }
+
+    /* Section - Article */
+
+    .articleDescription h4 {
+        font-size:1.5rem;
+    }
+
+    .articleImage {
+        height:550px;
+    }
+
+    .sustainableMaterials {
+        margin:40px 100px 50px 0;
+    }
+
+    .mixMatch {
+        margin:60px 0 60px 100px;
+    }
+
+    /* Footer */
+    .contactInfo p {
+        font-size: 0.7rem;
+    }
+
+} 
+
+@media (max-width: 1150px) {
+    /* General */
+
+    button {
+        display: block;
+        margin:50px auto 0;
+    }
+
+    /* Header */
+
+   .logo {
+        margin-left:-100px; 
+    }
+
+    /* Section - About */
+    .aboutImage,
+    .aboutInfo {
+        float:none;
+        width:100%;
+    }
+
+    .aboutInfo h2 {
+        width:100%;
+        text-align: center;
+        margin:25px 0 25px;
+    }
+
+    .aboutImage {
+        background: url(../assets/aboutImageMobile.png) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height:300px;
+    }
+
+    /* Section - Articles */
+
+    .articleImage1,
+    .sustainableMaterials,
+    .articleImage2,
+    .mixMatch {
+        float:none;
+        width:100%;
+    }
+
+    .mixMatch {
+        margin-left:0;
+    }
+
+    .articleImage1,
+    .articleImage2 {
+        margin-right: calc(50% - 50vw);
+        margin-left: calc(50% - 50vw);
+        width:auto;
+    }
+
+    /* Footer */
+
+    .footerNav,
+    .newsletterSubscribe,
+    .contactInfo {
+        float:none;
+        width:100%;
+        margin:25px 0;
+    }
+
+    .newsletterSubscribe,
+    .contactInfo {
+        text-align:center;
+    }
+
+    .footerNav li{
+        display:inline;
+        font-family: 'Lato', sans-serif;
+        text-transform: capitalize;
+        margin-right:10px;
+        text-align: right;
+    }
+}
+
+@media (max-width: 800px) {
+    /* General */
+    .wrapper {
+        width:90%;
+    }
+
+    section{
+        padding:60px 0;
+    }
+
+    /* Header */
+    header {
+        background: url(../assets/headerMobile.png) #201e21 no-repeat top right;
+        background-size: contain;
+    }
+
+    .logo {
+        width:75%;
+        padding-top:calc(45vh - 100px);
+    }
+
+    .headerSocialIcons,
+    .headerNav {
+        display: none;
+    }
+
+    .hamburgerNav {
+        visibility: visible;
+    }
+
+    /* Section - Latest Collection */
+
+    .collectionGallery img {
+        width:calc((100% - 40px) / 2);
+        margin-right:40px;
+        float:left;
+    }
+
+    .collectionGallery img:nth-of-type(2) {
+        margin-right: 0;
+    }
+    
+    .collectionGallery img:nth-of-type(3) {
+        display:none;    
+    }
+    
+    /* Section - Additional Links */
+    .titleCard {
+        float:none;
+        width:100%;
+    }
+
+    .titleCard i {
+        color:#faba63;
+        font-size: 3rem;
+    }
+
+    /* Section - Article */
+    article h4 {
+        width:100%;
+    }
+
+    .articleImage {
+        height:300px;
+    }
+
+    .articleImage1 {
+        background: url(../assets/articleMobile1.png) no-repeat center;
+        background-size: cover;
+        height:225px;
+
+    }
+    .articleImage2 {
+        background: url(../assets/articleMobile2.png) no-repeat center;
+        background-size:cover;
+    }
+
+    /* Footer */
+
+    input[type=email],
+    input[type=submit] {
+        float:none;
+        width:100%;
+    }
+
+    .mainContent {
+        padding:30px 0;
+    }
+}
+
+@media (max-width:500px) {
+    header {
+        height:600px;
+        background-size: cover;
+    }
+}
+
+@media (max-width:400px) {
+    /* Header */
+    .top {
+        font-weight: 300;
+    }
+    
+}
+
+@media (max-width:399px) {
+    /* Header */
+    .logo {
+        margin-left:-50px;
+    }
+
+}
+
